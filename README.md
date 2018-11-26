@@ -1,4 +1,47 @@
-# PlatzyAngular
+# JackDashboard
+
+ng serve --host 0.0.0.0
+
+npm install --save angular/material2-builds angular/cdk-builds angular/animations-builds
+
+ng add @angular/material
+
+
+import {BrowserAnimationsModule} from '@angular/platform-browser/animations';
+
+@NgModule({
+  ...
+  imports: [BrowserAnimationsModule],
+  ...
+})
+export class PizzaPartyAppModule { }
+
+
+import {MatButtonModule, MatCheckboxModule} from '@angular/material';
+
+@NgModule({
+  imports: [MatButtonModule, MatCheckboxModule],
+  exports: [MatButtonModule, MatCheckboxModule],
+})
+export class MyOwnCustomMaterialModule { }
+
+
+@import "~@angular/material/prebuilt-themes/indigo-pink.css";
+
+<link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
+
+ng generate module material
+import { MaterialModule } from './material/material.module';
+MaterialModule
+
+ng add @angular/cdk
+
+
+https://stackoverflow.com/questions/48493652/angular-5-mat-grid-list-responsive?rq=1
+
+npm install @angular/flex-layout --save
+
+https://github.com/angular/flex-layout/wiki/Responsive-API
 
 This project was generated with [Angular CLI](https://github.com/angular/angular-cli) version 7.0.3.
 
