@@ -1,12 +1,12 @@
-<agm-map [latitude]="lat" [longitude]="lng">
+<!-- <agm-map [latitude]="lat" [longitude]="lng">
   <agm-marker [latitude]="lat" [longitude]="lng"></agm-marker>
-</agm-map>
+</agm-map> -->
 <mat-list>
   <ng-container *ngFor="let lugar of lugares">
     <mat-list-item *ngIf="lugar.active">{{lugar.nombre}}</mat-list-item>
   </ng-container>
 </mat-list>
-<span>Breakpoint: {{grid.cols}}</span>
+<!-- <span>Breakpoint: {{grid.cols}}</span>
 <mat-grid-list #grid rowHeight="2:1">
   <mat-grid-tile>1</mat-grid-tile>
   <mat-grid-tile>2</mat-grid-tile>
@@ -16,12 +16,40 @@
   <mat-grid-tile>6</mat-grid-tile>
   <mat-grid-tile>7</mat-grid-tile>
   <mat-grid-tile>8</mat-grid-tile>
-</mat-grid-list>
+</mat-grid-list> -->
+<hr>
+<!-- <div class="bounds">
+  <mat-grid-list class="content" fxLayout="row" fxLayout.xs="column" fxFlexFill>
+    <mat-grid-tile fxFlex="15" class="sec1" fxFlex.xs="55">1</mat-grid-tile>
+    <mat-grid-tile fxFlex="30" class="sec2">2</mat-grid-tile>
+    <mat-grid-tile fxFlex="55" class="sec3" fxFlex.xs="15">3</mat-grid-tile>
+    <mat-grid-tile>4</mat-grid-tile>
+    <mat-grid-tile>5</mat-grid-tile>
+    <mat-grid-tile>6</mat-grid-tile>
+    <mat-grid-tile>7</mat-grid-tile>
+    <mat-grid-tile>8</mat-grid-tile>
+  </mat-grid-list>
+</div> -->
+<mat-card class="card-demo">
+  <mat-card-title>Responsive Layout Directions</mat-card-title>
+  <mat-card-subtitle>Layout direction changes to 'column' for 'xs' or 'sm' viewport sizes:
+  </mat-card-subtitle>
+  <mat-card-content>
+    <div class="containerX">
+      <div fxLayout="row" fxLayout.xs="column" fxLayout.sm="column" fxFlex
+           class="coloredContainerX box">
+        <div fxFlex> I'm above on mobile, and to the left on larger devices.</div>
+        <div fxFlex> I'm below on mobile, and to the right on larger devices.</div>
+      </div>
+    </div>
+  </mat-card-content>
+  <mat-card-footer style="width:95%">
+    <!-- <media-query-status></media-query-status> -->
+  </mat-card-footer>
+</mat-card>
 <hr>
 <div class="bounds">
-
   <div class="content" fxLayout="row" fxLayout.xs="column" fxFlexFill>
-
     <div fxFlex="15" class="sec1" fxFlex.xs="55">
       first-section
     </div>
@@ -31,9 +59,7 @@
     <div fxFlex="55" class="sec3" fxFlex.xs="15">
       third-section
     </div>
-
   </div>
-
 </div>
 <!-- <mat-list>
   <ng-container *ngFor="let lugar of lugares; let i = index" [ngSwitch]="lugar.cercania">

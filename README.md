@@ -40,6 +40,7 @@ ng add @angular/cdk
 https://stackoverflow.com/questions/48493652/angular-5-mat-grid-list-responsive?rq=1
 
 npm install @angular/flex-layout --save
+https://github.com/angular/flex-layout/blob/master/src/apps/demo-app/src/app/responsive/responsive.module.ts
 
 https://github.com/angular/flex-layout/wiki/Responsive-API
 
