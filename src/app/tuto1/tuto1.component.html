@@ -1,9 +1,11 @@
-<!-- <agm-map [latitude]="lat" [longitude]="lng">
+<agm-map [latitude]="lat" [longitude]="lng">
   <agm-marker [latitude]="lat" [longitude]="lng"></agm-marker>
-</agm-map> -->
+</agm-map>
 <mat-list>
   <ng-container *ngFor="let lugar of lugares">
-    <mat-list-item *ngIf="lugar.active">{{lugar.nombre}}</mat-list-item>
+    <a routerLink="/detalles/{{lugar.id}}" [queryParams]="{action: 'view'}">
+      <mat-list-item *ngIf="lugar.active">{{lugar.nombre}}</mat-list-item>
+    </a>
   </ng-container>
 </mat-list>
 <!-- <span>Breakpoint: {{grid.cols}}</span>

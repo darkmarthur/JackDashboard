@@ -20,6 +20,14 @@ import { DashboardTemplateComponent } from './dashboard-template/dashboard-templ
 import { TreeTemplateComponent } from './tree-template/tree-template.component';
 import { DragDropTemplateComponent } from './drag-drop-template/drag-drop-template.component';
 import { Tuto1Component } from './tuto1/tuto1.component';
+import { DetallesComponent } from './detalles/detalles.component';
+
+import { LugaresService } from './lugares.service';
+
+import { environment } from '../environments/environment';
+import { AngularFireModule } from 'angularfire2';
+import { AngularFirestoreModule } from 'angularfire2/firestore';
+
 @NgModule({
   declarations: [
     AppComponent,
@@ -31,7 +39,8 @@ import { Tuto1Component } from './tuto1/tuto1.component';
     DashboardTemplateComponent,
     TreeTemplateComponent,
     DragDropTemplateComponent,
-    Tuto1Component
+    Tuto1Component,
+    DetallesComponent
   ],
   imports: [
     BrowserModule,
@@ -43,26 +52,13 @@ import { Tuto1Component } from './tuto1/tuto1.component';
     }),
     MaterialModule,
     BrowserAnimationsModule,
-    // MatInputModule,
-    // MatButtonModule,
-    // MatSelectModule,
-    // MatRadioModule,
-    // MatCardModule,
     ReactiveFormsModule,
     LayoutModule,
-    // MatToolbarModule,
-    // MatSidenavModule,
-    // MatIconModule,
-    // MatListModule,
-    // MatTableModule,
-    // MatPaginatorModule,
-    // MatSortModule,
-    // MatGridListModule,
-    // MatMenuModule,
-    // MatTreeModule,
-    // DragDropModule
+    AngularFireModule,
+    AngularFirestoreModule,
+    AngularFireModule.initializeApp(environment.firebase)
   ],
-  providers: [],
+  providers: [LugaresService],
   bootstrap: [AppComponent]
 })
 export class AppModule { }

@@ -7,6 +7,7 @@ import { TreeTemplateComponent } from './tree-template/tree-template.component';
 import { TableTemplateComponent } from './table-template/table-template.component';
 import { MainNavigationComponent } from './main-navigation/main-navigation.component';
 import { Tuto1Component } from './tuto1/tuto1.component';
+import { DetallesComponent } from './detalles/detalles.component';
 
 const routes: Routes = [
   {
@@ -14,28 +15,25 @@ const routes: Routes = [
     // component: MainNavigationComponent
     redirectTo: 'tuto1',
     pathMatch: 'full'
-  },
-  {
+  }, {
     path: 'contact',
     component: ContactFormComponent
-  },
-  {
+  }, {
+    path: 'detalles/:id',
+    component: DetallesComponent
+  }, {
     path: 'drag',
     component: DragDropTemplateComponent
-  },
-  {
+  }, {
     path: 'tree',
     component: TreeTemplateComponent
-  },
-  {
+  }, {
     path: 'dashboard',
     component: DashboardTemplateComponent
-  },
-  {
+  }, {
     path: 'table',
     component: TableTemplateComponent
-  },
-  {
+  } ,{
     path: 'tuto1',
     component: Tuto1Component
   },
