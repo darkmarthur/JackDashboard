@@ -27,6 +27,10 @@ import { LugaresService } from './lugares.service';
 import { environment } from '../environments/environment';
 import { AngularFireModule } from 'angularfire2';
 import { AngularFirestoreModule } from 'angularfire2/firestore';
+import { AngularFireDatabaseModule } from 'angularfire2/database';
+// import { AngularFireAuthModule } from 'angularfire2/auth';
+
+import { CrearComponent } from './crear/crear.component';
 
 @NgModule({
   declarations: [
@@ -40,7 +44,8 @@ import { AngularFirestoreModule } from 'angularfire2/firestore';
     TreeTemplateComponent,
     DragDropTemplateComponent,
     Tuto1Component,
-    DetallesComponent
+    DetallesComponent,
+    CrearComponent
   ],
   imports: [
     BrowserModule,
@@ -56,7 +61,9 @@ import { AngularFirestoreModule } from 'angularfire2/firestore';
     LayoutModule,
     AngularFireModule,
     AngularFirestoreModule,
-    AngularFireModule.initializeApp(environment.firebase)
+    AngularFireModule.initializeApp(environment.firebase),
+    AngularFireDatabaseModule,
+    // AngularFireAuthModule
   ],
   providers: [LugaresService],
   bootstrap: [AppComponent]

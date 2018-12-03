@@ -17,3 +17,17 @@ agm-map {
 }
 html, body { height: 100%; }
 body { margin: 0; font-family: Roboto, "Helvetica Neue", sans-serif; }
+
+.content-margin {
+    margin-left: 30px;
+    margin-right: 30px;
+}
+
+.button-row button {
+    margin-right: 8px;
+
+}
+
+.form-container .mat-radio-button {
+    margin: 0 5px;
+  }

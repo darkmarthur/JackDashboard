@@ -1,6 +1,9 @@
 <agm-map [latitude]="lat" [longitude]="lng">
   <agm-marker [latitude]="lat" [longitude]="lng"></agm-marker>
 </agm-map>
+<h2>Lugares Cercanos</h2>
+<button mat-raised-button [routerLink]="['/crear']" routerLinkActive="router-link-active" >Click me!</button>
+
 <mat-list>
   <ng-container *ngFor="let lugar of lugares">
     <a routerLink="/detalles/{{lugar.id}}" [queryParams]="{action: 'view'}">

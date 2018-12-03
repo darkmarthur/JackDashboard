@@ -8,6 +8,7 @@ import { TableTemplateComponent } from './table-template/table-template.componen
 import { MainNavigationComponent } from './main-navigation/main-navigation.component';
 import { Tuto1Component } from './tuto1/tuto1.component';
 import { DetallesComponent } from './detalles/detalles.component';
+import { CrearComponent } from './crear/crear.component';
 
 const routes: Routes = [
   {
@@ -33,9 +34,12 @@ const routes: Routes = [
   }, {
     path: 'table',
     component: TableTemplateComponent
-  } ,{
+  }, {
     path: 'tuto1',
     component: Tuto1Component
+  }, {
+    path: 'crear',
+    component: CrearComponent
   },
 ];
 
